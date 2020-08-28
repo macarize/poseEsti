@@ -51,13 +51,10 @@ while True:
 
     pose = run_demo(net, frame, 256, 1, 0, 1)
     if pose is not None:
-        #print(pose.keypoints)
         print('you')
-
+        pose = pickle.dumps(pose)
+        conn.sendall(pose)
     else:
-        print("no keeypoints detected")
-
-    pose = pickle.dumps(pose)
-    conn.sendall(pose)
+        print("no keypoints detected")
 
 

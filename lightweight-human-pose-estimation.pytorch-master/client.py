@@ -24,3 +24,7 @@ while True:
     pose = pickle.loads(pose)
     print(pose.keypoints)
 
+    #pose.draw(frame)
+    #cv2.imshow('test', frame)
+    #if cv2.waitKey(1) == ord('q'):
+    #   break
