@@ -53,7 +53,7 @@ while True:
     # Extract frame
     frame = pickle.loads(frame_data)
 
-    pose = run_demo(net, frame, 256, 1, 0, 1)
+    pose = run_demo(net, frame, 256, 0, 0, 1)
     if pose is not None:
         print('you')
         pose = pickle.dumps(pose)
