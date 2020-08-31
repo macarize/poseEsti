@@ -9,7 +9,7 @@ from test import run_demo, ImageReader
 from models.with_mobilenet import PoseEstimationWithMobileNet
 from modules.load_state import load_state
 
-HOST = '54.180.176.99'
+HOST = ''
 PORT = 8089
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
