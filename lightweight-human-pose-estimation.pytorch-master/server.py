@@ -21,6 +21,7 @@ s.listen(10)
 print('Socket now listening')
 
 conn, addr = s.accept()
+print('ACCENPTED')
 
 data = '' ### CHANGED
 payload_size = struct.calcsize("L") ### CHANGED
@@ -34,6 +35,7 @@ while True:
     # Retrieve message size
     while len(data) < payload_size:
         data += conn.recv(4096)
+    print('MESSAGESIZE')
 
     packed_msg_size = data[:payload_size]
     data = data[payload_size:]
@@ -42,7 +44,7 @@ while True:
     # Retrieve all data based on message size
     while len(data) < msg_size:
         data += conn.recv(4096)
-    print('recved')
+    print('RECIEVED')
 
     frame_data = data[:msg_size]
     data = data[msg_size:]
@@ -55,6 +57,8 @@ while True:
         print('you')
         pose = pickle.dumps(pose)
         conn.sendall(pose)
+        print('SENEDED')
+
     else:
         print("no keypoints detected")
 
