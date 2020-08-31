@@ -13,19 +13,15 @@ while True:
     ret,frame=cap.read()
     # Serialize frame
     data = pickle.dumps(frame)
-    print('1')
     # Send message length first
     message_size = struct.pack("=L", len(data))
-    print('2')
 
     # Then data
     clientsocket.sendall(message_size + data)
-    print('3')
 
     pose = clientsocket.recv(4096)
     pose = pickle.loads(pose)
     print(pose.keypoints)
-    print('4')
 
     pose.draw(frame)
     cv2.imshow('test', frame)

@@ -62,5 +62,5 @@ while True:
 
     else:
         print("no keypoints detected")
-
+        continue
 
