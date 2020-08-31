@@ -23,7 +23,7 @@ while True:
 
     pose = clientsocket.recv(4096)
     pose = pickle.loads(pose)
-    print(pose.keypoints[8][0] + " " + pose.keypoints[11][0])
+    print(pose.keypoints[8][0], pose.keypoints[11][0])
 
     pose.draw(frame)
     cv2.imshow('test', frame)
