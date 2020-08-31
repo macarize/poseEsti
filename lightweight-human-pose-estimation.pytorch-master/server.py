@@ -20,9 +20,6 @@ print('Socket bind complete')
 s.listen(10)
 print('Socket now listening')
 
-conn, addr = s.accept()
-print('ACCENPTED')
-
 data = '' ### CHANGED
 payload_size = struct.calcsize("L") ### CHANGED
 
@@ -31,6 +28,8 @@ checkpoint = torch.load('checkpoint_iter_370000.pth', map_location='cpu')
 load_state(net, checkpoint)
 
 while True:
+    conn, addr = s.accept()
+    print('ACCENPTED')
 
     # Retrieve message size
     while len(data) < payload_size:
