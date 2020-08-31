@@ -22,7 +22,7 @@ print('Socket now listening')
 
 conn, addr = s.accept()
 
-data = b'' ### CHANGED
+data = '' ### CHANGED
 payload_size = struct.calcsize("L") ### CHANGED
 
 net = PoseEstimationWithMobileNet()
@@ -48,7 +48,8 @@ while True:
 
     # Extract frame
     frame = pickle.loads(frame_data)
-
+    print('recved')
+    
     pose = run_demo(net, frame, 256, 0, 0, 1)
     if pose is not None:
         print('you')
