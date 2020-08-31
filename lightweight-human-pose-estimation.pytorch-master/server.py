@@ -27,11 +27,10 @@ net = PoseEstimationWithMobileNet()
 checkpoint = torch.load('checkpoint_iter_370000.pth', map_location='cpu')
 load_state(net, checkpoint)
 
-
+conn, addr = s.accept()
 print('ACCENPTED')
 while True:
 
-    conn, addr = s.accept()
     # Retrieve message size
     while len(data) < payload_size:
         data += conn.recv(4096)
@@ -63,4 +62,5 @@ while True:
 
     else:
         print("no keypoints detected")
+
 
