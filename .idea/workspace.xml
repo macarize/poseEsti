@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="162aaa3d-e025-48f8-8a8b-d943f9b69435" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/server.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="839">
-              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="393">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -62,8 +62,8 @@
         <option value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/val.py" />
         <option value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/test.py" />
         <option value="$PROJECT_DIR$/poseEsti/server.py" />
-        <option value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/server.py" />
         <option value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/client.py" />
+        <option value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/server.py" />
       </list>
     </option>
   </component>
@@ -273,8 +273,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="839">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="393">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

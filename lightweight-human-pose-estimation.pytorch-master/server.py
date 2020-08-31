@@ -42,14 +42,14 @@ while True:
     # Retrieve all data based on message size
     while len(data) < msg_size:
         data += conn.recv(4096)
+    print('recved')
 
     frame_data = data[:msg_size]
     data = data[msg_size:]
 
     # Extract frame
     frame = pickle.loads(frame_data)
-    print('recved')
-    
+
     pose = run_demo(net, frame, 256, 0, 0, 1)
     if pose is not None:
         print('you')
