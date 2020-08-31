@@ -38,7 +38,7 @@ while True:
     print(payload_size)
     packed_msg_size = data[:payload_size]
     data = data[payload_size:]
-    msg_size = struct.unpack("L", packed_msg_size)[0] ### CHANGED
+    msg_size = struct.unpack("=L", packed_msg_size)[0] ### CHANGED
     print('unpack')
     # Retrieve all data based on message size
     while len(data) < msg_size:
