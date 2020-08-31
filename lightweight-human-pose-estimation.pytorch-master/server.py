@@ -27,9 +27,10 @@ net = PoseEstimationWithMobileNet()
 checkpoint = torch.load('checkpoint_iter_370000.pth', map_location='cpu')
 load_state(net, checkpoint)
 
+conn, addr = s.accept()
+print('ACCENPTED')
+
 while True:
-    conn, addr = s.accept()
-    print('ACCENPTED')
 
     # Retrieve message size
     while len(data) < payload_size:
@@ -44,6 +45,7 @@ while True:
     while len(data) < msg_size:
         data += conn.recv(4096)
         print(len(data))
+        print(msg_size)
     print('RECIEVED')
 
     frame_data = data[:msg_size]
