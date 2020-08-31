@@ -39,7 +39,7 @@ while True:
     packed_msg_size = data[:payload_size]
     data = data[payload_size:]
     msg_size = struct.unpack("L", packed_msg_size)[0] ### CHANGED
-
+    print('unpack')
     # Retrieve all data based on message size
     while len(data) < msg_size:
         data += conn.recv(4096)
@@ -51,7 +51,7 @@ while True:
     # Extract frame
     frame = pickle.loads(frame_data)
 
-    pose = run_demo(net, frame, 256, 0, 0, 1)
+    pose = run_demo(net, frame, 256, 1, 0, 1)
     if pose is not None:
         print('you')
         pose = pickle.dumps(pose)

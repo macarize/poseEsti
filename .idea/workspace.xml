@@ -12,16 +12,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="241">
+              <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/temp.jpg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -33,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/client.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+            <state relative-caret-position="399">
+              <caret line="29" column="20" lean-forward="true" selection-end-line="33" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -71,8 +76,8 @@
         <option value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/val.py" />
         <option value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/test.py" />
         <option value="$PROJECT_DIR$/poseEsti/server.py" />
-        <option value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/client.py" />
         <option value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/server.py" />
+        <option value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/client.py" />
       </list>
     </option>
   </component>
@@ -247,7 +252,6 @@
     <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/temp/temp.jpg" />
     <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/train.py" />
     <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/modules/pose.py" />
-    <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/temp.jpg" />
     <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/test.jpg" />
     <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/test.py" />
     <entry file="file://$PROJECT_DIR$/poseEsti/server.py">
@@ -277,22 +281,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/client.py">
+    <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/temp.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+        <state relative-caret-position="241">
+          <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/server.py">
+    <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/client.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="399">
+          <caret line="29" column="20" lean-forward="true" selection-end-line="33" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
