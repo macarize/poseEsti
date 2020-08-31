@@ -43,6 +43,7 @@ while True:
     # Retrieve all data based on message size
     while len(data) < msg_size:
         data += conn.recv(4096)
+        print(len(data))
     print('RECIEVED')
 
     frame_data = data[:msg_size]
