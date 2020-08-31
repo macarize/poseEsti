@@ -15,7 +15,7 @@ while True:
     data = pickle.dumps(frame)
     print('1')
     # Send message length first
-    message_size = struct.pack("L", len(data))
+    message_size = struct.pack("=L", len(data))
     print('2')
 
     # Then data

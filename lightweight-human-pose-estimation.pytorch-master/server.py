@@ -21,7 +21,7 @@ s.listen(10)
 print('Socket now listening')
 
 data = b'' ### CHANGED
-payload_size = struct.calcsize("L") ### CHANGED
+payload_size = struct.calcsize("=L") ### CHANGED
 
 net = PoseEstimationWithMobileNet()
 checkpoint = torch.load('checkpoint_iter_370000.pth', map_location='cpu')
@@ -29,14 +29,13 @@ load_state(net, checkpoint)
 
 conn, addr = s.accept()
 print('ACCENPTED')
-
 while True:
 
     # Retrieve message size
     while len(data) < payload_size:
         data += conn.recv(4096)
     print('MESSAGESIZE')
-
+    print(payload_size)
     packed_msg_size = data[:payload_size]
     data = data[payload_size:]
     msg_size = struct.unpack("L", packed_msg_size)[0] ### CHANGED
