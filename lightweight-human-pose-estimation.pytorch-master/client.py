@@ -77,8 +77,7 @@ while True:
         if angle > 140:
             stepA = False
             stepB = False
-
-    cv2.putText(frame, str(count),
+    cv2.putText(frame, "count" + str(count),
                 bottomLeftCornerOfText,
                 font,
                 fontScale,

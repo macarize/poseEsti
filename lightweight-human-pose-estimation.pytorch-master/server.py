@@ -12,6 +12,8 @@ from modules.load_state import load_state
 HOST = ''
 PORT = 8089
 
+emptyPoses = []
+
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print('Socket created')
 
@@ -59,8 +61,11 @@ while True:
         pose = pickle.dumps(pose)
         conn.sendall(pose)
         print('SENEDED')
-
+        emptyPoses = []
+        emptyPoses.append(pose)
     else:
+        pose = pickle.dumps(emptyPoses[0])
+        conn.sendall(pose)
         print("no keypoints detected")
 
 
