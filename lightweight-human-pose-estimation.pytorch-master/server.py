@@ -20,7 +20,7 @@ print('Socket bind complete')
 s.listen(10)
 print('Socket now listening')
 
-data = '' ### CHANGED
+data = b'' ### CHANGED
 payload_size = struct.calcsize("L") ### CHANGED
 
 net = PoseEstimationWithMobileNet()
