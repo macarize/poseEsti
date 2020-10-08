@@ -25,7 +25,7 @@ import io
 
 
 HOST = ''
-PORT = 8089
+PORT = 8088
 
 emptyPoses = []
 
