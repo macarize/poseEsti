@@ -4,10 +4,15 @@ import socket
 import sys
 import pickle
 import struct
+from flask import Flask, render_template, Response
+import io
 
 stepA = False
 stepB = False
 count = 0
+
+sitAngle = 0
+stdupAngle = 0
 
 font = cv2.FONT_HERSHEY_SIMPLEX
 bottomLeftCornerOfText = (50, 400)
@@ -21,7 +26,7 @@ lineType = 2
 cap=cv2.VideoCapture(0)
 clientsocket=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 clientsocket.connect(('54.180.176.99',8089))
-#cap = cv2.VideoCapture('squat.mp4')
+#cap = cv2.VideoCapture('pushUp.mp4')
 while True:
     ret,frame=cap.read()
     # Serialize frame
@@ -42,8 +47,6 @@ while True:
     if cv2.waitKey(1) == ord('q'):
        break
 
-
-
     A = np.array([pose.keypoints[8][0],pose.keypoints[8][1]])
     B = np.array([pose.keypoints[9][0],pose.keypoints[9][1]])
     C = np.array([pose.keypoints[10][0],pose.keypoints[10][1]])
@@ -58,8 +61,16 @@ while True:
 
     if angle > 140 :
         stepA = True
+        if stdupAngle is 0:
+            stdupAngle = angle
+        if angle > stdupAngle:
+            stdupAngle = angle
     if angle < 70 :
         stepB = True
+        if sitAngle is 0:
+            sitAngle = angle
+        if angle < sitAngle:
+            sitAngle = angle
 
     if stepA and stepB is True :
         if angle > 140:
@@ -67,16 +78,37 @@ while True:
             stepB = False
             count += 1
 
-            cv2.putText(frame,"good",
-                        topLeft,
+            if sitAngle > 60:
+                cv2.putText(frame,"Bend your knee more",
+                            topLeft,
+                            font,
+                            fontScale,
+                            fontColor,
+                            lineType)
+
+            stdupDiff = 140 - stdupAngle
+            sitDiff = 70 - sitAngle
+
+            stdupDiff = abs(stdupDiff)
+            sitDiff = abs(sitDiff)
+            correctness = 280 - (stdupDiff + sitDiff)
+
+            cv2.putText(frame, "correctness" + str(correctness),
+                        bottomLeftCornerOfText,
                         font,
                         fontScale,
                         fontColor,
                         lineType)
+
+            sitAngle = 0
+            stdupAngle = 0
     if stepA is True and stepB is False :
         if angle > 140:
             stepA = False
             stepB = False
+            sitAngle = 0
+            stdupAngle = 0
+
     cv2.putText(frame, "count" + str(count),
                 bottomLeftCornerOfText,
                 font,
