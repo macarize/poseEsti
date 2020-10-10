@@ -31,11 +31,11 @@ while True:
     ret,frame=cap.read()
     # Serialize frame
     #frame = cv2.transpose(frame)
-    #frame = cv2.flip(frame,flipCode=1)
-    data = pickle.dumps(frame)
-    # Send message length first
-    message_size = struct.pack("=L", len(data))
-
-    # Then data
+    #     #frame = cv2.flip(frame,flipCode=1)
+    #     data = pickle.dumps(frame)
+    #     # Send message length first
+    #     message_size = struct.pack("=L", len(data))
+    #
+    #     # Then data
     clientsocket.sendall(message_size + data)
 
