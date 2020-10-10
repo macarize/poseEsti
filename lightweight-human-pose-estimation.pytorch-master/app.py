@@ -23,29 +23,8 @@ import struct
 from flask import Flask, render_template, Response
 import io
 
-
-HOST = ''
-PORT = 8088
-
-emptyPoses = []
-
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-print('Socket created')
-
-s.bind((HOST, PORT))
-print('Socket bind complete')
-s.listen(10)
-print('Socket now listening')
-
-net = PoseEstimationWithMobileNet()
-checkpoint = torch.load('checkpoint_iter_370000.pth', map_location='cpu')
-load_state(net, checkpoint)
-
 app = Flask(__name__)
-vc = cv2.VideoCapture(0)
 
-conn, addr = s.accept()
-print('ACCENPTED')
 @app.route('/')
 def index():
     """Video streaming home page."""
@@ -54,6 +33,27 @@ def index():
 
 def gen():
     """Video streaming generator function."""
+    HOST = ''
+    PORT = 8088
+
+    emptyPoses = []
+
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    print('Socket created')
+
+    s.bind((HOST, PORT))
+    print('Socket bind complete')
+    s.listen(10)
+    print('Socket now listening')
+
+    net = PoseEstimationWithMobileNet()
+    checkpoint = torch.load('checkpoint_iter_370000.pth', map_location='cpu')
+    load_state(net, checkpoint)
+
+
+    conn, addr = s.accept()
+    print('ACCENPTED')
+
     data = b''  ### CHANGED
     payload_size = struct.calcsize("=L")  ### CHANGED
 
@@ -101,7 +101,7 @@ def gen():
         pose = run_demo(net, frame, 256, 0, 0, 1)
 
         pose.draw(frame)
-        cv2.imshow('test', frame)
+        #cv2.imshow('test', frame)
         if cv2.waitKey(1) == ord('q'):
             break
 
@@ -193,6 +193,6 @@ def video_feed():
 
 
 if __name__ == '__main__':
-    s.close()
+    #s.close()
     app.run(host='0.0.0.0', debug=True, threaded=True)
 

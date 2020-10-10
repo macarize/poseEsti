@@ -25,7 +25,7 @@ lineType = 2
 
 cap=cv2.VideoCapture(0)
 clientsocket=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-clientsocket.connect(('54.180.176.99',8089))
+clientsocket.connect(('127.0.0.1',8089))
 #cap = cv2.VideoCapture('pushUp.mp4')
 while True:
     ret,frame=cap.read()
