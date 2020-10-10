@@ -37,9 +37,6 @@ print('Socket bind complete')
 s.listen(10)
 print('Socket now listening')
 
-data = b'' ### CHANGED
-payload_size = struct.calcsize("=L") ### CHANGED
-
 net = PoseEstimationWithMobileNet()
 checkpoint = torch.load('checkpoint_iter_370000.pth', map_location='cpu')
 load_state(net, checkpoint)
@@ -57,6 +54,9 @@ def index():
 
 def gen():
     """Video streaming generator function."""
+    data = b''  ### CHANGED
+    payload_size = struct.calcsize("=L")  ### CHANGED
+
     stepA = False
     stepB = False
     count = 0
@@ -176,7 +176,6 @@ def gen():
         #cv2.imshow("img", frame)
 
         #print(count)
-
         encode_return_code, image_buffer = cv2.imencode('.jpg', frame)
         io_buf = io.BytesIO(image_buffer)
         yield (b'--frame\r\n'
@@ -189,8 +188,11 @@ def video_feed():
     return Response(
         gen(),
         mimetype='multipart/x-mixed-replace; boundary=frame'
+
     )
 
 
 if __name__ == '__main__':
+    s.close()
     app.run(host='0.0.0.0', debug=True, threaded=True)
+
