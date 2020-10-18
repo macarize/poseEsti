@@ -249,6 +249,9 @@ button:hover {
 </body>
 </html>
 <script>
+  let params = location.search.substr(location.search.indexOf("?"));
+  params = params.split("=");
+
   window.onload = () => {
     setInterval(() => {
       $.ajax({
@@ -258,9 +261,9 @@ button:hover {
         dataType: 'json',
         success: (res) => {
           console.log(res.count)
-          if(res.count === 2) {
+          if(res.count === 10) {
             alert('Finish')
-            location.href = `http://127.0.0.1:8000/homet/`
+            location.href = `http://127.0.0.1:8000/homet//?Key=${params[1]}`
           }
         }
       })
