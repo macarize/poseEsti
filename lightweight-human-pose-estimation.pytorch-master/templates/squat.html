@@ -248,3 +248,21 @@ button:hover {
     </div>
 </body>
 </html>
+<script>
+  window.onload = () => {
+    setInterval(() => {
+      $.ajax({
+        url: `http://${window.location.host}/count`,
+        type: 'GET',
+        data: {data: "test"},
+        dataType: 'json',
+        success: (res) => {
+          console.log(res.count)
+          if(res.count === 10) {
+            alert('Finish')
+          }
+        }
+      })
+    }, 1000)
+  }
+</script>
