@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="162aaa3d-e025-48f8-8a8b-d943f9b69435" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/pushup.html" beforeDir="false" afterPath="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/pushup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/squat.html" beforeDir="false" afterPath="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/squat.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="281" lean-forward="true" selection-end-line="352" />
+            <state relative-caret-position="376">
+              <caret line="28" lean-forward="true" selection-end-line="352" />
               <folding>
                 <element signature="e#22#72#0" expanded="true" />
               </folding>
@@ -49,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/pushup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="189" column="1" selection-start-line="189" selection-start-column="1" selection-end-line="189" selection-end-column="1" />
+            <state relative-caret-position="233">
+              <caret line="229" column="17" selection-start-line="229" selection-start-column="14" selection-end-line="229" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -72,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/squat.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="219" column="1" lean-forward="true" selection-start-line="219" selection-start-column="1" selection-end-line="219" selection-end-column="1" />
+            <state relative-caret-position="214">
+              <caret line="190" selection-start-line="190" selection-end-line="190" />
             </state>
           </provider>
         </entry>
@@ -137,6 +136,7 @@
       <find>count</find>
       <find>print</find>
       <find>draw</find>
+      <find>img</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,8 +159,8 @@
         <option value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/client.py" />
         <option value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/pushUpClient.py" />
         <option value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/app.py" />
-        <option value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/squat.html" />
         <option value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/pushup.html" />
+        <option value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/squat.html" />
       </list>
     </option>
   </component>
@@ -572,27 +572,27 @@
     <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/modules/one_euro_filter.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/app.py">
+    <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/pushup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="281" lean-forward="true" selection-end-line="352" />
-          <folding>
-            <element signature="e#22#72#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="233">
+          <caret line="229" column="17" selection-start-line="229" selection-start-column="14" selection-end-line="229" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/squat.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="219" column="1" lean-forward="true" selection-start-line="219" selection-start-column="1" selection-end-line="219" selection-end-column="1" />
+        <state relative-caret-position="214">
+          <caret line="190" selection-start-line="190" selection-end-line="190" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/pushup.html">
+    <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="189" column="1" selection-start-line="189" selection-start-column="1" selection-end-line="189" selection-end-column="1" />
+        <state relative-caret-position="376">
+          <caret line="28" lean-forward="true" selection-end-line="352" />
+          <folding>
+            <element signature="e#22#72#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
