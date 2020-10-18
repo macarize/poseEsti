@@ -227,6 +227,7 @@ def gen2():
     stepA = False
     stepB = False
     global count
+    count = 0
 
     font = cv2.FONT_HERSHEY_SIMPLEX
     bottomLeftCornerOfText = (50, 400)
