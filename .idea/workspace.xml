@@ -27,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="312" column="77" lean-forward="true" selection-end-line="336" />
+            <state relative-caret-position="297">
+              <caret line="182" column="8" selection-end-line="336" />
               <folding>
                 <element signature="e#22#72#0" expanded="true" />
               </folding>
@@ -118,6 +118,7 @@
       <find>run</find>
       <find>socket crea</find>
       <find>count</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -562,8 +563,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="312" column="77" lean-forward="true" selection-end-line="336" />
+        <state relative-caret-position="297">
+          <caret line="182" column="8" selection-end-line="336" />
           <folding>
             <element signature="e#22#72#0" expanded="true" />
           </folding>

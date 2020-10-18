@@ -120,7 +120,7 @@ def gen():
         cosine_angle = np.dot(BA, BC) / (np.linalg.norm(BA) * np.linalg.norm(BC))
         angle = np.arccos(cosine_angle)
         angle = np.degrees(angle)
-        print(angle)
+        #print(angle)
 
         if angle > 140:
             stepA = True
@@ -180,7 +180,7 @@ def gen():
                     lineType)
         #cv2.imshow("img", frame)
 
-        #print(count)
+        print(count)
         encode_return_code, image_buffer = cv2.imencode('.jpg', frame)
         io_buf = io.BytesIO(image_buffer)
         yield (b'--frame\r\n'
@@ -235,7 +235,7 @@ def gen2():
         while len(data) < payload_size:
             data += conn.recv(4096)
         print('MESSAGESIZE')
-        print(payload_size)
+        #print(payload_size)
         packed_msg_size = data[:payload_size]
         data = data[payload_size:]
         msg_size = struct.unpack("=L", packed_msg_size)[0]  ### CHANGED
@@ -243,8 +243,8 @@ def gen2():
         # Retrieve all data based on message size
         while len(data) < msg_size:
             data += conn.recv(4096)
-            print(len(data))
-            print(msg_size)
+            #print(len(data))
+            #print(msg_size)
         print('RECIEVED')
 
         frame_data = data[:msg_size]
@@ -274,7 +274,7 @@ def gen2():
         cosine_angle = np.dot(BA, BC) / (np.linalg.norm(BA) * np.linalg.norm(BC))
         angle = np.arccos(cosine_angle)
         angle = np.degrees(angle)
-        print(angle)
+        #print(angle)
 
         if angle > 25:
             stepA = True
