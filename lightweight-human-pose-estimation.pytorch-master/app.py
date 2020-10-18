@@ -28,10 +28,10 @@ app = Flask(__name__)
 @app.route('/<type>')
 def index(type):
     """Video streaming home page."""
-    if type == 'squat'
-        return render_template('index.html')
-    elif type == 'pushup'
-        return render_template('index2.html')
+    if type == 'squat':
+        return render_template('squat.html')
+    elif type == 'pushup':
+        return render_template('pushup.html')
 
 
 def gen():
