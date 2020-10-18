@@ -231,7 +231,7 @@ def gen2():
 
     #cap = cv2.VideoCapture(0)
     clientsocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    clientsocket.connect(('54.180.176.99', 8089))
+    #clientsocket.connect(('54.180.176.99', 8089))
     # cap = cv2.VideoCapture('pushUp.mp4')
     while True:
         ret, frame = cap.read()
@@ -243,7 +243,7 @@ def gen2():
         message_size = struct.pack("=L", len(data))
 
         # Then data
-        clientsocket.sendall(message_size + data)
+        #clientsocket.sendall(message_size + data)
 
         pose = clientsocket.recv(4096)
         pose = pickle.loads(pose)
