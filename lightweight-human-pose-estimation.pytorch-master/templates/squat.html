@@ -258,11 +258,12 @@ button:hover {
         dataType: 'json',
         success: (res) => {
           console.log(res.count)
-          if(res.count === 10) {
+          if(res.count === 2) {
             alert('Finish')
+            location.href = `http://127.0.0.1:8000/homet/`
           }
         }
       })
-    }, 1000)
+    }, 2000)
   }
 </script>

@@ -75,7 +75,7 @@
         <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/squat.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="440">
-              <caret line="266" column="3" selection-end-line="267" selection-end-column="9" />
+              <caret line="267" column="3" selection-end-line="268" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -574,7 +574,7 @@
     <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/squat.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
-          <caret line="266" column="3" selection-end-line="267" selection-end-column="9" />
+          <caret line="267" column="3" selection-end-line="268" selection-end-column="9" />
         </state>
       </provider>
     </entry>
