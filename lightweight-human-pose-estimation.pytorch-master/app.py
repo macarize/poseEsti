@@ -27,13 +27,13 @@ import io
 app = Flask(__name__)
 count = 0
 
-@app.router('/count')
+@app.route('/count')
 def getCount():
     global count
 
     return jsonify(count=count)
 
-@app.route('/<type>/<Key>')
+@app.route('/<type>')
 def index(type):
     """Video streaming home page."""
     if type == 'squat':
