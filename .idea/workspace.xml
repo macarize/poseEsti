@@ -39,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="281" column="20" lean-forward="true" selection-end-line="348" />
+            <state relative-caret-position="224">
+              <caret line="317" column="13" selection-end-line="348" />
               <folding>
                 <element signature="e#22#72#0" expanded="true" />
               </folding>
@@ -406,17 +406,6 @@
       <window_info anchor="right" id="R Packages" order="4" />
     </layout>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/app.py</url>
-          <line>331</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/argparse.pyi">
       <provider selected="true" editor-type-id="text-editor">
@@ -585,8 +574,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="281" column="20" lean-forward="true" selection-end-line="348" />
+        <state relative-caret-position="224">
+          <caret line="317" column="13" selection-end-line="348" />
           <folding>
             <element signature="e#22#72#0" expanded="true" />
           </folding>

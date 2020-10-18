@@ -315,7 +315,7 @@ def gen2():
                         fontScale,
                         fontColor,
                         lineType)
-            cv2.imshow("img", frame)
+            #cv2.imshow("img", frame)
 
             print(count)
             print(angle)
