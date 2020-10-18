@@ -339,12 +339,10 @@ def gen():
 @app.route('/video_feed')
 def video_feed():
     """Video streaming route. Put this in the src attribute of an img tag."""
-    if request.args.get('key2') == 'nonetype':
-        return Response(
-            gen(),
-            mimetype='multipart/x-mixed-replace; boundary=frame'
-
-        )
+    return Response(
+        gen(),
+        mimetype='multipart/x-mixed-replace; boundary=frame'
+    )
 
 if __name__ == '__main__':
     #s.close()
