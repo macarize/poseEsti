@@ -189,15 +189,6 @@ a:hover::after {
   color: red;
 }
 
-img {
-    position: relative;
-    float: left;
-    padding-top: 370px;
-    width: 450px;
-    height: 450px;
-    z-index: -1;
-}
-
 .sub-footer button {
     width: 150px;
     height: 100px;
@@ -238,7 +229,6 @@ button:hover {
         <div class="section">
              <img src="{{ url_for('video_feed2') }}">
         </div>
-        <button onclick="start()">START</button>
     </div>
     <div id="footer">
         <div class="sub-footer">
@@ -248,3 +238,22 @@ button:hover {
     </div>
 </body>
 </html>
+<script>
+  window.onload = () => {
+    setInterval(() => {
+      $.ajax({
+        url: `http://${window.location.host}/count`,
+        type: 'GET',
+        data: {data: "test"},
+        dataType: 'json',
+        success: (res) => {
+          console.log(res.count)
+          if(res.count === 10) {
+            alert('Finish')
+            location.href = `http://127.0.0.1:8000/homet/result`
+          }
+        }
+      })
+    }, 2000)
+  }
+</script>
