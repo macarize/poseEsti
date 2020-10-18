@@ -2,7 +2,9 @@
 from flask import Flask, render_template, Response
 import io
 import cv2
-
+from flask import Flask
+from flask_cors import CORS
+from flask import request
 import pickle
 import socket
 import struct
@@ -24,6 +26,7 @@ from flask import Flask, render_template, Response
 import io
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/')
 def index():
