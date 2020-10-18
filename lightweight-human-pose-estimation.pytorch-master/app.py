@@ -25,6 +25,7 @@ import io
 #import voice
 
 app = Flask(__name__)
+count = 0
 
 @app.route('/<type>')
 def index(type):
@@ -63,7 +64,7 @@ def gen():
 
     stepA = False
     stepB = False
-    count = 0
+    global count
 
     sitAngle = 0
     stdupAngle = 0
@@ -218,7 +219,7 @@ def gen2():
 
     stepA = False
     stepB = False
-    count = 0
+    global count
 
     font = cv2.FONT_HERSHEY_SIMPLEX
     bottomLeftCornerOfText = (50, 400)
@@ -269,12 +270,6 @@ def gen2():
 
         BA = A - B
         BC = C - B
-
-        print(A)
-        print(B)
-        print(C)
-        print(BA)
-        print(BC)
 
         cosine_angle = np.dot(BA, BC) / (np.linalg.norm(BA) * np.linalg.norm(BC))
         angle = np.arccos(cosine_angle)
