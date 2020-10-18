@@ -1,8 +1,254 @@
-<html>
-  <head>
-    <title>Video Streaming Demonstration</title>
-  </head>
-  <body>
-    <img src="{{ url_for('video_feed2') }}">
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"
+  ></script>
+    <style>
+
+        #contents {
+            position: absolute;
+            width: 100%;
+            height: 60%;
+            top:20%;
+        }
+
+        .section {
+            text-align: center;
+            width: 80%;
+            height: 100%;
+            margin-left: 10%;
+            background-color: #606060;
+        }
+    </style>
+    <style>
+#header{
+    border-bottom: 3px solid white;
+    padding: 8px;
+}
+#footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 5px;
+}
+.sub-footer{
+    float: right;
+    margin: 5px;
+}
+p.clear {clear: both;} /* float 줄바꿈 css */
+body {
+    height: 100vh;
+    overflow: hidden;
+    font-size: larger;
+    font-family: a블랙M;
+    background-color: #222222;
+    color: white;
+}
+
+.section {
+    border: 1px solid white;
+}
+
+/*아이디, 패스워드*/
+.form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 50%;
+}
+
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid indianred;
+    outline: 0;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+    color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+}
+
+.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, indianred, red);
+    border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: indianred;
+    font-weight: 700;
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+    box-shadow: none;
+}
+
+/*버튼*/
+a {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #cecd24;
+    text-decoration: none;
+    font-size: 2em;
+    display: inline-block;
+    font-family: Montserrat;
+    text-transform: uppercase;
+    padding: 0.5em 2em;
+    border: 2px solid #cecd24;
+    -webkit-transition: 0.02s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+    transition: 0.02s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+}
+
+a::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: #cecd24;
+    -webkit-transition: 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+    transition: 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+    z-index: -1;
+}
+
+a::after {
+    content: "";
+    display: inline-block;
+    background-image: url("https://image.flaticon.com/icons/png/128/109/109617.png");
+    position: absolute;
+    top: 0;
+    left: calc(100% - 3em);
+    right: 3em;
+    bottom: 0;
+    background-size: 1.5em;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-transition: right 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+    transition: right 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+}
+
+a:hover {
+    padding: 0.5em 3.5em 0.5em 0.5em;
+}
+
+a:hover::before {
+    left: calc(100% - 3em);
+    right: 0;
+    -webkit-transition: 0.3s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+    transition: 0.3s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+}
+
+a:hover::after {
+    right: 0;
+    -webkit-transition: right 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+    transition: right 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+}
+
+#HEAL {
+  font-size: 70px;
+}
+
+#PER {
+  font-size: 70px;
+  color: red;
+}
+
+img {
+    position: relative;
+    float: left;
+    padding-top: 370px;
+    width: 450px;
+    height: 450px;
+    z-index: -1;
+}
+
+.sub-footer button {
+    width: 150px;
+    height: 100px;
+    background-color: #595959;
+    border: none;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: a블랙M;
+}
+
+button:hover {
+    background-color: indianred;
+}
+
+.mainTitle {
+    font-size: 100px;
+    color: red;
+}
+
+.subTitle {
+    font-size: 40px;
+}
+</style>
+</head>
+<body>
+    <div id="header">
+    <span class="mainTitle">TRANNINIG </span>
+    <span class="subTitle">따라하기</span>
+    </div>
+    <div id="contents">
+        <div class="section">
+            <h2>캠 화면</h2>
+        </div>
+        <button onclick="start()">START</button>
+    </div>
+    <img src="{{ url_for('video_feed') }}">
+    <div id="footer">
+        <div class="sub-footer">
+            <button onclick="back()">뒤로가기</button>
+            <button onclick="exit()">나가기</button>
+        </div>
+    </div>
+</body>
 </html>

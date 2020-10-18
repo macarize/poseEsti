@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="162aaa3d-e025-48f8-8a8b-d943f9b69435" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/voice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/pushup.html" beforeDir="false" afterPath="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/pushup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/squat.html" beforeDir="false" afterPath="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/squat.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,19 +29,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+            <state relative-caret-position="361">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#22#72#0" expanded="true" />
               </folding>
@@ -46,17 +41,30 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/index2.html">
+        <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/voice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+            <state relative-caret-position="-419">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/Dockerfile">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/pushup.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4446">
+              <caret line="234" column="8" selection-start-line="234" selection-start-column="8" selection-end-line="234" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/squat.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1153">
+              <caret line="234" column="8" selection-end-line="255" selection-end-column="7" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -140,7 +148,10 @@
         <option value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/client.py" />
         <option value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/client_test.py" />
         <option value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/index2.html" />
+        <option value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/voice.py" />
         <option value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/app.py" />
+        <option value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/pushup.html" />
+        <option value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/squat.html" />
       </list>
     </option>
   </component>
@@ -219,12 +230,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\leehy\Downloads\lightweight-human-pose-estimation.pytorch-master\lightweight-human-pose-estimation.pytorch-master\templates" />
       <recent name="C:\Users\leehy\Downloads\lightweight-human-pose-estimation.pytorch-master\lightweight-human-pose-estimation.pytorch-master" />
+      <recent name="C:\Users\leehy\Downloads\lightweight-human-pose-estimation.pytorch-master\lightweight-human-pose-estimation.pytorch-master\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -370,6 +381,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="58" y="36" width="974" height="1057" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35667396" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -536,11 +548,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+        <state relative-caret-position="361">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="e#22#72#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/voice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-419">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/pushup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4446">
+          <caret line="234" column="8" selection-start-line="234" selection-start-column="8" selection-end-line="234" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/squat.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1153">
+          <caret line="234" column="8" selection-end-line="255" selection-end-column="7" />
         </state>
       </provider>
     </entry>
