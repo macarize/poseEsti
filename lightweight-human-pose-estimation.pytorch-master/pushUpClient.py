@@ -43,6 +43,8 @@ while True:
     pose = clientsocket.recv(4096)
     pose = pickle.loads(pose)
 
+
+
     pose.draw(frame)
     cv2.imshow('test', frame)
     if cv2.waitKey(1) == ord('q'):

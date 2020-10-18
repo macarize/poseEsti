@@ -212,10 +212,6 @@ def gen2():
     data = b''  ### CHANGED
     payload_size = struct.calcsize("=L")  ### CHANGED
 
-    stepA = False
-    stepB = False
-    count = 0
-
     A = 0
     B = 0
     C = 0
@@ -223,17 +219,6 @@ def gen2():
     stepA = False
     stepB = False
     count = 0
-
-    font = cv2.FONT_HERSHEY_SIMPLEX
-    bottomLeftCornerOfText = (50, 400)
-    topLeft = (150, 400)
-
-    fontScale = 3
-    fontColor = (255, 0, 0)
-    lineType = 2
-
-    sitAngle = 0
-    stdupAngle = 0
 
     font = cv2.FONT_HERSHEY_SIMPLEX
     bottomLeftCornerOfText = (50, 400)
@@ -285,6 +270,12 @@ def gen2():
         BA = A - B
         BC = C - B
 
+        print(A)
+        print(B)
+        print(C)
+        print(BA)
+        print(BC)
+
         cosine_angle = np.dot(BA, BC) / (np.linalg.norm(BA) * np.linalg.norm(BC))
         angle = np.arccos(cosine_angle)
         angle = np.degrees(angle)
@@ -320,6 +311,7 @@ def gen2():
         cv2.imshow("img", frame)
 
         print(count)
+
         encode_return_code, image_buffer = cv2.imencode('.jpg', frame)
         io_buf = io.BytesIO(image_buffer)
         yield (b'--frame\r\n'
