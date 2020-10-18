@@ -186,7 +186,7 @@ def gen():
                b'Content-Type: image/jpeg\r\n\r\n' + io_buf.read() + b'\r\n')
 
 
-def gen2():
+def gen():
     """Video streaming generator function."""
     HOST = ''
     PORT = 8088
@@ -212,14 +212,12 @@ def gen2():
     data = b''  ### CHANGED
     payload_size = struct.calcsize("=L")  ### CHANGED
 
-    print('pose')
-    A = 0
-    B = 0
-    C = 0
-
     stepA = False
     stepB = False
     count = 0
+
+    sitAngle = 0
+    stdupAngle = 0
 
     font = cv2.FONT_HERSHEY_SIMPLEX
     bottomLeftCornerOfText = (50, 400)
@@ -229,24 +227,33 @@ def gen2():
     fontColor = (255, 0, 0)
     lineType = 2
 
-    #cap = cv2.VideoCapture(0)
-    clientsocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    #clientsocket.connect(('54.180.176.99', 8089))
-    # cap = cv2.VideoCapture('pushUp.mp4')
+    emptyPoses = []
+
     while True:
-        ret, frame = cap.read()
-        # Serialize frame
-        # frame = cv2.transpose(frame)
-        # frame = cv2.flip(frame,flipCode=1)
-        data = pickle.dumps(frame)
-        # Send message length first
-        message_size = struct.pack("=L", len(data))
+        while len(data) < payload_size:
+            data += conn.recv(4096)
+        print('MESSAGESIZE')
+        print(payload_size)
+        packed_msg_size = data[:payload_size]
+        data = data[payload_size:]
+        msg_size = struct.unpack("=L", packed_msg_size)[0]  ### CHANGED
+        print('unpack')
+        # Retrieve all data based on message size
+        while len(data) < msg_size:
+            data += conn.recv(4096)
+            print(len(data))
+            print(msg_size)
+        print('RECIEVED')
 
-        # Then data
-        #clientsocket.sendall(message_size + data)
+        frame_data = data[:msg_size]
+        data = data[msg_size:]
 
-        pose = clientsocket.recv(4096)
-        pose = pickle.loads(pose)
+        # Extract frame
+        frame = pickle.loads(frame_data)
+
+        #read_return_code, frame = vc.read()
+
+        pose = run_demo(net, frame, 256, 0, 0, 1)
 
         pose.draw(frame)
         #cv2.imshow('test', frame)
