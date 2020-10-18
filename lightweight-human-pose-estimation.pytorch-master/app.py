@@ -273,8 +273,12 @@ def gen2():
             A = np.array([pose.keypoints[2][0], pose.keypoints[2][1]])
             if B is 0:
                 B = np.array([pose.keypoints[10][0], pose.keypoints[10][1]])
+                if sum(B) is -2 :
+                    B = np.array([pose.keypoints[13][0], pose.keypoints[13][1]])
             if C is 0:
                 C = np.array([pose.keypoints[4][0], pose.keypoints[4][1]])
+                if sum(C) is -2:
+                    C = np.array([pose.keypoints[7][0], pose.keypoints[7][1]])
 
             BA = A - B
             BC = C - B
