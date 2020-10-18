@@ -33,7 +33,7 @@ def getCount():
 
     return jsonify(count=count)
 
-@app.route('/<type>')
+@app.route('/<type>/<Key>')
 def index(type):
     """Video streaming home page."""
     if type == 'squat':
