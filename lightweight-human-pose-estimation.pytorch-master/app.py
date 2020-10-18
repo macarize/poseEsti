@@ -224,6 +224,7 @@ def gen2():
     B = 0
     C = 0
 
+
     stepA = False
     stepB = False
     global count
@@ -238,6 +239,7 @@ def gen2():
     lineType = 2
 
     emptyPoses = []
+
 
     while True:
         while len(data) < payload_size:
@@ -276,6 +278,10 @@ def gen2():
 
             BA = A - B
             BC = C - B
+
+            print(A)
+            print(B)
+            print(C)
 
             cosine_angle = np.dot(BA, BC) / (np.linalg.norm(BA) * np.linalg.norm(BC))
             angle = np.arccos(cosine_angle)
