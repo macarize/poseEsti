@@ -266,59 +266,59 @@ def gen2():
 
         if pose is not None:
             pose.draw(frame)
-        #cv2.imshow('test', frame)
-        if cv2.waitKey(1) == ord('q'):
-            break
+            #cv2.imshow('test', frame)
+            if cv2.waitKey(1) == ord('q'):
+                break
 
-        A = np.array([pose.keypoints[2][0], pose.keypoints[2][1]])
-        if B is 0:
-            B = np.array([pose.keypoints[10][0], pose.keypoints[10][1]])
-        if C is 0:
-            C = np.array([pose.keypoints[4][0], pose.keypoints[4][1]])
+            A = np.array([pose.keypoints[2][0], pose.keypoints[2][1]])
+            if B is 0:
+                B = np.array([pose.keypoints[10][0], pose.keypoints[10][1]])
+            if C is 0:
+                C = np.array([pose.keypoints[4][0], pose.keypoints[4][1]])
 
-        BA = A - B
-        BC = C - B
+            BA = A - B
+            BC = C - B
 
-        cosine_angle = np.dot(BA, BC) / (np.linalg.norm(BA) * np.linalg.norm(BC))
-        angle = np.arccos(cosine_angle)
-        angle = np.degrees(angle)
-        #print(angle)
+            cosine_angle = np.dot(BA, BC) / (np.linalg.norm(BA) * np.linalg.norm(BC))
+            angle = np.arccos(cosine_angle)
+            angle = np.degrees(angle)
+            #print(angle)
 
-        if angle > 25:
-            stepA = True
-        if angle < 15:
-            stepB = True
-
-        if stepA and stepB is True:
             if angle > 25:
-                stepA = False
-                stepB = False
-                count += 1
+                stepA = True
+            if angle < 15:
+                stepB = True
 
-                cv2.putText(frame, "good",
-                            topLeft,
-                            font,
-                            fontScale,
-                            fontColor,
-                            lineType)
-        if stepA is True and stepB is False:
-            if angle > 25:
-                stepA = False
-                stepB = False
-        cv2.putText(frame, "count" + str(count),
-                    bottomLeftCornerOfText,
-                    font,
-                    fontScale,
-                    fontColor,
-                    lineType)
-        cv2.imshow("img", frame)
+            if stepA and stepB is True:
+                if angle > 25:
+                    stepA = False
+                    stepB = False
+                    count += 1
 
-        print(count)
+                    cv2.putText(frame, "good",
+                                topLeft,
+                                font,
+                                fontScale,
+                                fontColor,
+                                lineType)
+            if stepA is True and stepB is False:
+                if angle > 25:
+                    stepA = False
+                    stepB = False
+            cv2.putText(frame, "count" + str(count),
+                        bottomLeftCornerOfText,
+                        font,
+                        fontScale,
+                        fontColor,
+                        lineType)
+            cv2.imshow("img", frame)
 
-        encode_return_code, image_buffer = cv2.imencode('.jpg', frame)
-        io_buf = io.BytesIO(image_buffer)
-        yield (b'--frame\r\n'
-               b'Content-Type: image/jpeg\r\n\r\n' + io_buf.read() + b'\r\n')
+            print(count)
+
+            encode_return_code, image_buffer = cv2.imencode('.jpg', frame)
+            io_buf = io.BytesIO(image_buffer)
+            yield (b'--frame\r\n'
+                   b'Content-Type: image/jpeg\r\n\r\n' + io_buf.read() + b'\r\n')
 
 @app.route('/video_feed')
 def video_feed():
