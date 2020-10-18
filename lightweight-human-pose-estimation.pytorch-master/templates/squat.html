@@ -218,6 +218,10 @@ button:hover {
 .subTitle {
     font-size: 40px;
 }
+#streamContainer {
+    width : 100%;
+    height : 100%;
+}
 </style>
 </head>
 <body>
@@ -227,7 +231,7 @@ button:hover {
     </div>
     <div id="contents">
         <div class="section">
-             <img src="{{ url_for('video_feed') }}">
+             <img id='streamContainer' src="{{ url_for('video_feed') }}">
         </div>
     </div>
     <div id="footer">
