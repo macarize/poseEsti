@@ -25,6 +25,7 @@ import io
 import voice
 
 app = Flask(__name__)
+global count
 
 @app.route('/<type>')
 def index(type):
@@ -63,7 +64,7 @@ def gen():
 
     stepA = False
     stepB = False
-    count = 0
+    # count = 0
 
     sitAngle = 0
     stdupAngle = 0
@@ -219,7 +220,7 @@ def gen2():
 
     stepA = False
     stepB = False
-    count = 0
+    #count = 0
 
     font = cv2.FONT_HERSHEY_SIMPLEX
     bottomLeftCornerOfText = (50, 400)
@@ -315,7 +316,7 @@ def video_feed():
 def video_feed2():
     """Video streaming route. Put this in the src attribute of an img tag."""
     return Response(
-        gen(),
+        gen2(),
         mimetype='multipart/x-mixed-replace; boundary=frame'
 
     )

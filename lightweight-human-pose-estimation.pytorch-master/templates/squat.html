@@ -8,9 +8,8 @@
     integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
     crossorigin="anonymous"
   ></script>
-    <style>
-
-        #contents {
+ <style>
+            #contents {
             position: absolute;
             width: 100%;
             height: 60%;
@@ -24,8 +23,6 @@
             margin-left: 10%;
             background-color: #606060;
         }
-    </style>
-  <style>
 #header{
     border-bottom: 3px solid white;
     padding: 8px;
@@ -239,11 +236,10 @@ button:hover {
     </div>
     <div id="contents">
         <div class="section">
-            <h2>캠 화면</h2>
+             <img src="{{ url_for('video_feed') }}">
         </div>
         <button onclick="start()">START</button>
     </div>
-    <img src="{{ url_for('video_feed') }}">
     <div id="footer">
         <div class="sub-footer">
             <button onclick="back()">뒤로가기</button>
