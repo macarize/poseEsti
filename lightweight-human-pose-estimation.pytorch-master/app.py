@@ -20,12 +20,18 @@ import socket
 import sys
 import pickle
 import struct
-from flask import Flask, render_template, Response
+from flask import Flask, render_template, Response, jsonify
 import io
 #import voice
 
 app = Flask(__name__)
 count = 0
+
+@app.router('/count')
+def getCount():
+    global count
+
+    return jsonify(count=count)
 
 @app.route('/<type>')
 def index(type):
