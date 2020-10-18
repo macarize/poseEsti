@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="162aaa3d-e025-48f8-8a8b-d943f9b69435" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/squat.html" beforeDir="false" afterPath="$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/squat.html" afterDir="false" />
-    </list>
+    <list default="true" id="162aaa3d-e025-48f8-8a8b-d943f9b69435" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+            <state relative-caret-position="233">
+              <caret line="265" column="8" selection-start-line="265" selection-start-column="8" selection-end-line="265" selection-end-column="8" />
               <folding>
                 <element signature="e#22#72#0" expanded="true" />
               </folding>
@@ -75,8 +72,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/squat.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="599">
-              <caret line="267" column="3" selection-end-line="268" selection-end-column="9" />
+            <state relative-caret-position="618">
+              <caret line="268" column="9" lean-forward="true" selection-start-line="268" selection-start-column="9" selection-end-line="268" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -380,6 +377,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17377399" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -563,15 +561,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/templates/squat.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="267" column="3" selection-end-line="268" selection-end-column="9" />
+        <state relative-caret-position="618">
+          <caret line="268" column="9" lean-forward="true" selection-start-line="268" selection-start-column="9" selection-end-line="268" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lightweight-human-pose-estimation.pytorch-master/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+        <state relative-caret-position="233">
+          <caret line="265" column="8" selection-start-line="265" selection-start-column="8" selection-end-line="265" selection-end-column="8" />
           <folding>
             <element signature="e#22#72#0" expanded="true" />
           </folding>
