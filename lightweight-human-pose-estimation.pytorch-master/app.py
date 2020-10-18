@@ -71,7 +71,7 @@ def gen():
     stepA = False
     stepB = False
     global count
-
+    count = 0
     sitAngle = 0
     stdupAngle = 0
 
@@ -120,7 +120,7 @@ def gen():
             A = np.array([pose.keypoints[8][0], pose.keypoints[8][1]])
             B = np.array([pose.keypoints[9][0], pose.keypoints[9][1]])
             C = np.array([pose.keypoints[10][0], pose.keypoints[10][1]])
-    
+
             BA = A - B
             BC = C - B
 
