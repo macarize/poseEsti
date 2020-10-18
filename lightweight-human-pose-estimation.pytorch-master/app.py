@@ -241,18 +241,15 @@ def gen2():
     while True:
         while len(data) < payload_size:
             data += conn.recv(4096)
-        print('MESSAGESIZE')
         #print(payload_size)
         packed_msg_size = data[:payload_size]
         data = data[payload_size:]
         msg_size = struct.unpack("=L", packed_msg_size)[0]  ### CHANGED
-        print('unpack')
         # Retrieve all data based on message size
         while len(data) < msg_size:
             data += conn.recv(4096)
             #print(len(data))
             #print(msg_size)
-        print('RECIEVED')
 
         frame_data = data[:msg_size]
         data = data[msg_size:]
@@ -314,7 +311,7 @@ def gen2():
             cv2.imshow("img", frame)
 
             print(count)
-
+            print(angle)
             encode_return_code, image_buffer = cv2.imencode('.jpg', frame)
             io_buf = io.BytesIO(image_buffer)
             yield (b'--frame\r\n'
