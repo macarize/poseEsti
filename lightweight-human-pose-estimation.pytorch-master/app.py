@@ -186,7 +186,7 @@ def gen():
                b'Content-Type: image/jpeg\r\n\r\n' + io_buf.read() + b'\r\n')
 
 
-def gen():
+def gen2():
     """Video streaming generator function."""
     HOST = ''
     PORT = 8088
@@ -215,6 +215,22 @@ def gen():
     stepA = False
     stepB = False
     count = 0
+
+    A = 0
+    B = 0
+    C = 0
+
+    stepA = False
+    stepB = False
+    count = 0
+
+    font = cv2.FONT_HERSHEY_SIMPLEX
+    bottomLeftCornerOfText = (50, 400)
+    topLeft = (150, 400)
+
+    fontScale = 3
+    fontColor = (255, 0, 0)
+    lineType = 2
 
     sitAngle = 0
     stdupAngle = 0
